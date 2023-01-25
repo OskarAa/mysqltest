@@ -1,0 +1,39 @@
+    '''
+  Dzēst ierakstu pēc ID
+  s_id = 5003
+     cursorObj.execute("""
+     DELETE FROM salesman
+     WHERE salesman_id = ?
+     """, (s_id,))
+     conn.commit()
+  '''
+    '''
+  Palielināt komisiju visiem aģentiem uz 0.55
+   sql_update_query = """Update salesman set commission = .55"""
+      cursorObj.execute(sql_update_query)
+      conn.commit()
+  
+  Palielināt komisiju konkrētam aģentam pēc ID
+  sql_update_query = """Update salesman set commission = .45 where salesman_id = 5003"""
+      cursorObj.execute(sql_update_query)
+      conn.commit()
+  '''
+
+    '''
+  SELECT ROUND(gada_apgrozijums,0)
+
+  '''
+
+
+
+
+
+
+
+
+
+"""
+    if (conn):
+        conn.close()
+        print("\nThe SQLite connection is closed.")
+"""
